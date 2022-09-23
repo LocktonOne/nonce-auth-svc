@@ -24,11 +24,6 @@ func (s *service) router(cfg config.Config) chi.Router {
 			helpers.CtxServiceConfig(cfg.ServiceConfig()),
 			helpers.CtxNodeAdmins(gosdk.NewNodeAdminsMock(common.HexToAddress("0x750Bd531CEA1f68418DDF2373193CfbD86A69058"))), //TODO change when admin's smart contracts ready
 		),
-		cors.Handler(cors.Options{
-			AllowedOrigins: []string{"*"},
-			AllowedMethods: []string{"GET", "POST", "PUT", "DELETE"},
-			AllowedHeaders: []string{"*"},
-		}),
 	)
 	r.Route("/integrations/nonce-auth-svc", func(r chi.Router) {
 		r.Post("/nonce", handlers.GetNonce)
