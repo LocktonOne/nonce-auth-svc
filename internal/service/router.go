@@ -3,7 +3,6 @@ package service
 import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/go-chi/chi"
-	"github.com/go-chi/cors"
 	"gitlab.com/distributed_lab/ape"
 	gosdk "gitlab.com/tokene/go-sdk"
 	"gitlab.com/tokene/nonce-auth-svc/internal/config"
